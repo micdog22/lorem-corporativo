@@ -1,4 +1,4 @@
-# Lorem Corporativo — texto de preenchimento em corporatês para seus layouts (HTML + JS)
+# Lorem Corporativo: texto de preenchimento em corporatês para seus layouts (HTML + JS)
 
 Lorem ipsum é ótimo, mas não parece português: não tem acentos, cedilha nem aquelas palavras compridas que quebram o layout na hora errada. O **Lorem Corporativo** gera texto de preenchimento em português de verdade, com um toque de humor corporativo: alinhamentos, sinergias, follow-ups e reuniões sobre reuniões.
 
@@ -48,7 +48,7 @@ gerar({ tipo: 'topicos', quantidade: 5, intensidade: 'reuniao-de-segunda', forma
 | `tipo` | `paragrafos`, `frases`, `palavras`, `titulos`, `topicos`, `email`, `post` | `paragrafos` |
 | `quantidade` | inteiro de 1 até o limite do tipo (50 parágrafos, 100 frases, 1.000 palavras, 50 títulos ou tópicos, 10 e-mails ou posts) | depende do tipo |
 | `intensidade` | `leve`, `moderado`, `reuniao-de-segunda` | `moderado` |
-| `semente` | número ou texto; sem semente, uma é sorteada | — |
+| `semente` | número ou texto; sem semente, uma é sorteada | nenhuma |
 | `formato` | `texto` ou `html` | `texto` |
 
 Opções inválidas geram um erro com a explicação em português. Também são exportadas `generateBlocks` (conteúdo estruturado e a semente usada), `renderText` e `renderHtml`.
@@ -79,4 +79,4 @@ Issues e pull requests são bem-vindos, inclusive com novas frases (mantendo o h
 
 ## Licença
 
-MIT — veja [LICENSE](LICENSE).
+MIT. Veja [LICENSE](LICENSE).
