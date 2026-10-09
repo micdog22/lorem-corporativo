@@ -1,0 +1,16 @@
+{
+  "name": "lorem-corporativo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Texto de preenchimento em corporatês para layouts em português: parágrafos, títulos, listas, e-mails e posts.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micdog22/lorem-corporativo.git"
+  },
+  "homepage": "https://micdog22.github.io/lorem-corporativo/"
+}

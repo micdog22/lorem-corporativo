@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lorem Corporativo — texto de preenchimento em corporatês</title>
+  <meta name="description" content="Gere texto de preenchimento em português com jargão corporativo: parágrafos, títulos de slides, listas, e-mails de follow-up e posts motivacionais. Tudo no navegador.">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./src/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Lorem Corporativo</h1>
+    <p class="lead">Texto de preenchimento em corporatês para os seus layouts: português de verdade, com acentos, palavras longas e sinergia de sobra.</p>
+  </header>
+
+  <main>
+    <form id="controles" class="card" novalidate>
+      <div class="grid">
+        <div class="field">
+          <label for="tipo">Tipo de texto</label>
+          <select id="tipo" name="tipo">
+            <option value="paragrafos">Parágrafos</option>
+            <option value="frases">Frases</option>
+            <option value="palavras">Palavras</option>
+            <option value="titulos">Títulos de slides</option>
+            <option value="topicos">Lista de tópicos</option>
+            <option value="email">E-mail de follow-up</option>
+            <option value="post">Post motivacional</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="quantidade">Quantidade</label>
+          <input id="quantidade" name="quantidade" type="number" inputmode="numeric" min="1" max="50" step="1" value="3" aria-describedby="quantidade-dica">
+          <p class="hint" id="quantidade-dica">De 1 a 50.</p>
+        </div>
+        <div class="field">
+          <label for="semente">Semente <span class="optional">(opcional)</span></label>
+          <input id="semente" name="semente" type="text" autocomplete="off" spellcheck="false" placeholder="Ex.: 42 ou reunião" aria-describedby="semente-dica">
+          <p class="hint" id="semente-dica">A mesma semente gera sempre o mesmo texto.</p>
+        </div>
+      </div>
+
+      <fieldset class="segmented">
+        <legend>Intensidade</legend>
+        <div class="options">
+          <label><input type="radio" name="intensidade" value="leve"><span>Leve</span></label>
+          <label><input type="radio" name="intensidade" value="moderado" checked><span>Moderado</span></label>
+          <label><input type="radio" name="intensidade" value="reuniao-de-segunda"><span>Reunião de segunda-feira</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="segmented">
+        <legend>Formato</legend>
+        <div class="options">
+          <label><input type="radio" name="formato" value="texto" checked><span>Texto</span></label>
+          <label><input type="radio" name="formato" value="html"><span>HTML</span></label>
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button class="btn" type="submit">Gerar outro texto</button>
+        <button class="btn secondary" type="button" id="copiar">Copiar</button>
+        <p id="mensagem" class="message" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+
+    <section class="card" aria-labelledby="resultado-titulo">
+      <div class="result-header">
+        <h2 id="resultado-titulo">Resultado</h2>
+        <p id="status" class="muted" aria-live="polite"></p>
+      </div>
+      <div id="resultado" class="result"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Tudo roda no seu navegador. Código aberto no <a href="https://github.com/micdog22/lorem-corporativo">GitHub</a> · Licença MIT</p>
+  </footer>
+</body>
+</html>
